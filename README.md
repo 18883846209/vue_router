@@ -1,6 +1,6 @@
 # vue_router
 
-> A Vue.js project
+> A VueRouter project
 
 ## Build Setup
 

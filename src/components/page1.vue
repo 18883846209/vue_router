@@ -1,12 +1,13 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <router-link to="/bar">
+    <router-link to="/page1/bar">
       <button>bar</button>
     </router-link>
-    <router-link to="/foo">
+    <router-link to="/page1/foo">
       <button>foo</button>
     </router-link>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -25,5 +26,8 @@ export default {
 <style scoped>
 h1 {
   font-weight: normal;
+}
+button {
+  margin-bottom: 20px;
 }
 </style>

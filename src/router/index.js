@@ -16,7 +16,17 @@ export default new Router({
     {
       path: '/page1',
       name: 'page1',
-      component: page1
+      component: page1,
+      children: [
+        {
+          path: 'bar',
+          component: { template: '<div>this id bar</div>' }
+        },
+        {
+          path: 'foo',
+          component: { template: '<div>this is foo</div>' }
+        }
+      ]
     }
   ]
 })
