@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted () {
-    console.log(location.href)
+    console.log(this.$route.query, 'id')
   },
   methods: {
     toBar () {
