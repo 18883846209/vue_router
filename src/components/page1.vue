@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <router-link to="/page1/bar">
+    <router-link :to="{ path: '/page1/bar', params: { userid: 123 } }">
       <button>bar</button>
     </router-link>
     <router-link to="/page1/foo">
@@ -18,6 +18,9 @@ export default {
     return {
       msg: 'this is page1'
     }
+  },
+  mounted () {
+    console.log(location.href)
   }
 }
 </script>

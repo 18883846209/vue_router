@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <router-link to="/page1">
-      <button>跳转到page1</button>
-    </router-link>
+    <!-- <router-link to="/page1"> -->
+      <button @click="to">跳转到page1</button>
+    <!-- </router-link> -->
   </div>
 </template>
 
@@ -13,6 +13,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    to () {
+      this.$router.push({ path: '/page1', query: { id: '123' } })
     }
   }
 }
