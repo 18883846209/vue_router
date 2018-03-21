@@ -18,10 +18,10 @@ export default new Router({
       name: 'page1',
       component: page1,
       children: [
-        {
-          path: '',
-          component: { template: '<div>this is bar</div>' }
-        },
+        // {
+        //   path: '',
+        //   component: { template: '<div>this is bar</div>' }
+        // },
         {
           path: 'bar',
           component: { template: '<div>this is bar</div>' }

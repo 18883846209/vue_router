@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     to () {
-      this.$router.push({ path: '/page1', query: { id: '123' } })
+      this.$router.push({ name: 'page1', query: { id: '123', name: 'alice' } })
     }
   }
 }
