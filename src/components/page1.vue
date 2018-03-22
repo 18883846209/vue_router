@@ -2,10 +2,10 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <!-- <router-link to="/page1/bar"> -->
-      <button @click="toBar">bar</button>
+      <button @click="toBar">to bar</button>
     <!-- </router-link> -->
     <router-link to="/page1/foo">
-      <button>foo</button>
+      <button>to foo</button>
     </router-link>
     <router-view></router-view>
   </div>

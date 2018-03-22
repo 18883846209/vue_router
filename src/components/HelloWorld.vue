@@ -4,6 +4,10 @@
     <!-- <router-link to="/page1"> -->
       <button @click="to">跳转到page1</button>
     <!-- </router-link> -->
+    <button @click="show = !show">动画</button>
+    <transition name="slide">
+      <div class="squa" v-if="show"></div>
+    </transition>
   </div>
 </template>
 
@@ -12,7 +16,8 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      show: true
     }
   },
   methods: {
@@ -27,5 +32,29 @@ export default {
 <style scoped>
 h1 {
   font-weight: normal;
+}
+.squa {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #333;
+  background-color: antiquewhite;
+}
+.slide-enter-active, .slide-leave-active {
+  /* transition: all 1.1s; */
+  animation: scal 1s;
+}
+/* .slide-enter, .slide-leave {
+  transform: rotate(7200deg);
+} */
+@keyframes scal {
+  0% {
+    transform: scale(0);
+  }
+  66% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>
